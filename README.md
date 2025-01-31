@@ -1,3 +1,23 @@
+# Submission
+pull the image from docker hub
+[yang1234321/receipt-processor]()
+
+or build the image yourself
+```bash
+docker build -t yang1234321/receipt-processor .
+```
+
+## Run the server
+```bash
+docker run --rm -it -p 8000:8000 yang1234321/receipt-processor
+```
+Then test manually with postman or curl
+
+## Run the automated tests
+```bash
+docker run --rm -it yang1234321/receipt-processor python receipt_processor/manage.py test receipts
+```
+
 # Receipt Processor
 
 Build a webservice that fulfils the documented API. The API is described below. A formal definition is provided 

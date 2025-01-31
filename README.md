@@ -1,6 +1,6 @@
 # Submission
 pull the image from docker hub
-[yang1234321/receipt-processor]()
+[yang1234321/receipt-processor](https://hub.docker.com/repository/docker/yang1234321/receipt-processor/tags/latest/sha256-42c2d38dabaa40c73955abc288c398ac02026e95a839ff83b25f828877349353)
 
 or build the image yourself
 ```bash
@@ -17,6 +17,29 @@ Then test manually with postman or curl
 ```bash
 docker run --rm -it yang1234321/receipt-processor python receipt_processor/manage.py test receipts
 ```
+
+## if you prefer local env setup
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+or if you are on windows
+```bash
+.\venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+### Run the server
+```bash
+python manage.py runserver
+```
+
+### Run the tests
+```bash
+python manage.py test
+```
+
 
 # Receipt Processor
 
